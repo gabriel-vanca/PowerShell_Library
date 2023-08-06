@@ -14,8 +14,8 @@
 Write-Host "Terminating Terminal"
 
 # & "$PSScriptRoot/close-program.ps1" "Windows Terminal" "WindowsTerminal" "WindowsTerminal"
-$close_program = Invoke-RestMethod https://raw.githubusercontent.com/gabriel-vanca/`
-									PowerShell_Library/main/Scripts/Windows/`
+$close_program = Invoke-RestMethod https://raw.githubusercontent.com/gabriel-vanca/ `
+									PowerShell_Library/main/Scripts/Windows/ `
 									Software/close_program.ps1
 Invoke-Expression $close_program "Windows Terminal" "WindowsTerminal" "WindowsTerminal"
 
