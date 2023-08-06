@@ -8,5 +8,5 @@
 
 | Script                                                                         | Description                              |
 | ------------------------------------------------------------------------------ | ---------------------------------------- |
-| [close-program.ps1](Scripts/Windows/Software/close-program.ps1)                   | Closes the given program gracefully.     |
-| [close-windows-terminal.ps1](Scripts/Windows/Software/close-windows-terminal.ps1) | Closes the Windows Terminal application. |
+| [close_program.ps1](Scripts/Windows/Software/close_program.ps1)                   | Closes the given program gracefully.     |
+| [close_windows-terminal.ps1](Scripts/Windows/Software/close_windows-terminal.ps1) | Closes the Windows Terminal application. |
