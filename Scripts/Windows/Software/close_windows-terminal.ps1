@@ -22,7 +22,7 @@ $close_program_sb = [Scriptblock]::Create($close_program)
 $param1 = "Windows Terminal"
 $param2 = "WindowsTerminal"
 $param3 = "WindowsTerminal"
-Invoke-Command -ScriptBlock $close_program_sb -ArgumentList [$param1, $param2, $param3] -NoNewScope
+# Invoke-Command -ScriptBlock $close_program_sb -ArgumentList [$param1, $param2, $param3] -NoNewScope
 
 
 
