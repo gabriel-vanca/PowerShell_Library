@@ -14,9 +14,15 @@
 Write-Host "Terminating Terminal"
 
 # & "$PSScriptRoot/close-program.ps1" "Windows Terminal" "WindowsTerminal" "WindowsTerminal"
-$close_program = Invoke-RestMethod https://raw.githubusercontent.com/gabriel-vanca/PowerShell_Library/main/Scripts/Windows/Software/close_program.ps1
-Invoke-Expression $close_program "Windows Terminal" "WindowsTerminal" "WindowsTerminal"
 
+$scriptPath = "https://raw.githubusercontent.com/gabriel-vanca/PowerShell_Library/main/Scripts/Windows/Software/close_program.ps1"
+$WebClient = New-Object Net.WebClient
+$close_program = $WebClient.DownloadString($scriptPath)
+$close_program_sb = [Scriptblock]::Create($close_program)
+$param1 = "Windows Terminal"
+$param2 = "WindowsTerminal"
+$param3 = "WindowsTerminal"
+Invoke-Command -ScriptBlock $close_program_sb -ArgumentList [$param1, $param2, $param3] -NoNewScope
 
 
 
