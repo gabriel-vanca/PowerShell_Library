@@ -38,7 +38,7 @@ try {
 	} else {
 		$Processes = get-process -name $ProgramAliasName -errorAction 'silentlycontinue'
 		if ($Processes.Count -eq 0) {
-			Write-Host "$FullProgramName isn't running" -ForegroundColor DarkBlue
+			Write-Warning "$FullProgramName isn't running"
 		} else {
 			foreach ($Process in $Processes) {
 				$_.CloseMainWindow() | Out-Null
@@ -48,12 +48,12 @@ try {
 		}
 	}
 	if ($($Processes.Count) -eq 1) {
-		"$FullProgramName closed, 1 process stopped"
+		Write-Host "$FullProgramName closed, 1 process stopped"
 	} else {
-		"$FullProgramName closed, $($Processes.Count) processes stopped"
+		Write-Host "$FullProgramName closed, $($Processes.Count) processes stopped"
 	}
 	exit 0 # success
 } catch {
-	"Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
+	Write-Error "Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
 	exit 1
 }

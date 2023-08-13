@@ -26,6 +26,6 @@ try{
 	Invoke-Command -ScriptBlock $close_program_sb -ArgumentList [$param1, $param2, $param3] -NoNewScope
 	Write-Host "Terminal successfully terminated"
 } catch {
-	"Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
+	Write-Error "Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
 	exit 1
 }
