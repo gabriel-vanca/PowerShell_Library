@@ -51,7 +51,6 @@ try {
 	} else {
 		"$FullProgramName closed, $($Processes.Count) processes stopped"
 	}
-	Write-Host "Success"
 	exit 0 # success
 } catch {
 	"Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
