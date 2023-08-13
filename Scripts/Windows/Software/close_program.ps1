@@ -39,13 +39,13 @@ try {
 		$Processes = get-process -name $ProgramAliasName -errorAction 'silentlycontinue'
 		if ($Processes.Count -eq 0) {
 			Write-Warning "$FullProgramName isn't running"
-			exit 0
+		} else {
+			foreach ($Process in $Processes) {
+				$_.CloseMainWindow() | Out-Null
+			} 
+			Start-Sleep -milliseconds 100
+			stop-process -name $ProgramName -force -errorAction 'silentlycontinue'
 		}
-		foreach ($Process in $Processes) {
-			$_.CloseMainWindow() | Out-Null
-		} 
-		Start-Sleep -milliseconds 100
-		stop-process -name $ProgramName -force -errorAction 'silentlycontinue'
 	}
 	if ($($Processes.Count) -eq 1) {
 		"$FullProgramName closed, 1 process stopped"
