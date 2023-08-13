@@ -39,6 +39,7 @@ try {
 		$Processes = get-process -name $ProgramAliasName -errorAction 'silentlycontinue'
 		if ($Processes.Count -eq 0) {
 			Write-Warning "$FullProgramName isn't running"
+			exit 0
 		}
 		foreach ($Process in $Processes) {
 			$_.CloseMainWindow() | Out-Null
