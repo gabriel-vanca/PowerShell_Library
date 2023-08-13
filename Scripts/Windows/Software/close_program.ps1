@@ -54,6 +54,5 @@ try {
 	}
 	exit 0 # success
 } catch {
-	Write-Error "Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
-	exit 1
+	Write-Host "Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])" -ForegroundColor DarkRed
 }
