@@ -23,7 +23,5 @@ $param1 = "Windows Terminal"
 $param2 = "WindowsTerminal"
 $param3 = "WindowsTerminal"
 Invoke-Command -ScriptBlock $close_program_sb -ArgumentList [$param1, $param2, $param3] -NoNewScope
-Write-Host "!!!sleep20sec"
-Start-Sleep -Seconds 20
-Write-Host "!!!sleep20sec-done"
+Write-Host "!!!"
 
