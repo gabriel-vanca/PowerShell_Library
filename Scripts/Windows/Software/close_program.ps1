@@ -14,7 +14,7 @@
 .LINK
 	https://github.com/fleschutz/PowerShell/blob/master/Scripts/close-program.ps1
 .NOTES
-	Author: Markus Fleschutz | License: CC0
+	Author: Gabriel Vanca, Markus Fleschutz
 #>
 
 param([string]$FullProgramName = "", [string]$ProgramName = "", [string]$ProgramAliasName = "")
@@ -38,7 +38,7 @@ try {
 	} else {
 		$Processes = get-process -name $ProgramAliasName -errorAction 'silentlycontinue'
 		if ($Processes.Count -eq 0) {
-			throw "$FullProgramName isn't running"
+			Write-Warning "$FullProgramName isn't running"
 		}
 		foreach ($Process in $Processes) {
 			$_.CloseMainWindow() | Out-Null
