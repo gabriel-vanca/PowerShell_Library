@@ -27,5 +27,4 @@ try{
 	Write-Host "Terminal successfully terminated"
 } catch {
 	Write-Error "Error in line $($_.InvocationInfo.ScriptLineNumber): $($Error[0])"
-	exit 1
 }
