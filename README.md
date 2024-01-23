@@ -11,6 +11,8 @@
 | ------------------------------------------------------- | ----------------------------------- |
 | [ Install-Fonts.ps1](Scripts/Core/Fonts/Install-Fonts.ps1) | Installs all fonts from a directory |
 
+
+
 ## Windows
 
 ### ⚙️ Programs
