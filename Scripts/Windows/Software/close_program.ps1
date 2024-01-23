@@ -12,6 +12,7 @@
 .EXAMPLE
 	PS> ./close-program "Google Chrome" "chrome.exe"
 .LINK
+	https://github.com/gabriel-vanca/PowerShell_Library/blob/main/Scripts/Windows/Software/close_program.ps1
 	https://github.com/fleschutz/PowerShell/blob/master/Scripts/close-program.ps1
 .NOTES
 	Author: Gabriel Vanca, Markus Fleschutz

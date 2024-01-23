@@ -14,7 +14,7 @@
     Installs all fonts from the "$env:Temp\Fonts_to_install" directory. Fonts will be installed system-wide.
 
     .LINK
-    TODO
+    https://github.com/gabriel-vanca/PowerShell_Library/blob/main/Scripts/MacOS/Fonts/Install-Fonts.ps1
 #>
 
 [CmdletBinding()]
